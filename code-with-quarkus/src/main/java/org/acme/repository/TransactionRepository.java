@@ -15,7 +15,7 @@ import org.acme.transaction.model.Transaction;
  * @author aaron
  */
 @ApplicationScoped
-public class TransactionRepository implements PanacheMongoRepository{
+public class TransactionRepository implements PanacheMongoRepository<Transaction>{
     public List<Transaction> finByAccount(String account){
         return list("account",account);
     }

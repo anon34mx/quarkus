@@ -11,21 +11,22 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import org.acme.repository.TransactionRepository;
 import org.acme.transaction.model.Transaction;
-import org.jboss.logging.Logger;
+//import org.jboss.logging.Logger;
 /**
  *
  * @author aaron
  */
-@Path("/transactions")
-@Consumes("Application/json")
-@Produces("Application/json")
+
 public class TransactionResource {
-    Logger logger= Logger.getLogger(TransactionResource.class);
+//    Logger logger= Logger.getLogger(TransactionResource.class);
 
     @Inject
     TransactionRepository repository;
 
     @POST
+    @Consumes("application/json")
+    @Produces("application/json")
+    @Path("/transactions")
     public Transaction addTransaction(Transaction tx){
         repository.persist(tx);
         return tx;
