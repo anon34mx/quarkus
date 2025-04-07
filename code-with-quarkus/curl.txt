@@ -1,7 +1,5 @@
-curl --header "Content-Type: application/json" --request POST --data '{"account":"1010-101", "value":25000,"date":"2020-09-23","type":"CREDIT","description":"ahorro programado"}' http://localhost:8080/transactions
+curl --header "Content-Type: application/json" --request POST --data "{\"account\":\"1010-101\", \"value\":25000,\"date\":\"2020-09-23\",\"type\":\"CREDIT\",\"description\":\"ahorro programado\"}" http://localhost:8080/transactions
 
 
 
- curl -X POST localhost:8080/transactions
-	-H "Content-type:application/json" 
-	-d "{"account":"1010-101", "value":25000,"date":"2020-09-23","type":"CREDIT","description":"ahorro programado"}"
+curl -X POST localhost:8080/transactions -H "Content-type:application/json"  User-Agent: curl/7.76.1 -d "{"account":"1010-101", "value":25000,"date":"2020-09-23","type":"CREDIT","description":"ahorro programado"}"

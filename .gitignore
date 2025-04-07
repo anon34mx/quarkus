@@ -1,0 +1,4 @@
+/code-with-quarkus/target
+/code-with-quarkus/target/maven-status
+/code-with-quarkus/target/maven-status/maven-compiler-plugin/testCompile
+/code-with-quarkus/target
