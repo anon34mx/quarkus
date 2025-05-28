@@ -16,15 +16,15 @@ import org.acme.transaction.model.Transaction;
  */
 @ApplicationScoped
 public class TransactionRepository implements PanacheMongoRepository<Transaction>{
-    public List<Transaction> finByAccount(String account){
+    public List<Transaction> findByAccount(String account){
         return list("account",account);
     }
     
     public List<Transaction> findTxByAccountDate(String account, LocalDateTime date){
         return find("account=?1 and date=?2", account, date).list();
     }
-    public List<Transaction> findByDEscription(String desc){
-        String regex="(?i).*"+desc+".*s";
+    public List<Transaction> findByDescription(String desc){
+        String regex="(?i).*"+desc+".*";
         return find("description like ?1", regex).list();
     }
 }
